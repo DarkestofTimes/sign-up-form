@@ -1,0 +1,275 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* VARIABLES */
+:root {
+  --MAIN-BGC: ;
+  --MAIN-C: ;
+  --MAIN-BGC-ALT: ;
+  --MAIN-C-ALT: ;
+  --MAIN-FSIZE: clamp();
+  --SHADOW-C-VALID: 2px 2px 2px lightgreen;
+  --SHADOW-C-INVALID: 2px 2px 2px orangered;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(0.8rem, 2vh, 2rem);
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  z-index: -2;
+}
+
+.sideImg {
+  width: 100%;
+  height: calc(100vh + 6rem);
+  background-image: url(img/photo-1631451095765-2c91616fc9e6.avif);
+  background-position: center;
+  position: absolute;
+  z-index: -1;
+  top: -3rem;
+}
+
+.imgDiv {
+  width: 100%;
+  height: 5vh;
+  background-color: hsla(0, 0%, 100%, 0.564);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 5px;
+}
+.imgLogo {
+  position: relative;
+  top: -3px;
+}
+.imgh1 {
+  color: black;
+  padding: 0.2rem;
+}
+
+.imgFooter {
+  width: 100%;
+  position: absolute;
+  bottom: 7.5rem;
+  background-color: hsla(0, 0%, 100%, 0.543);
+}
+.imgFooterP {
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+.imgA {
+  color: black;
+}
+.imgA:any-link {
+  color: black;
+}
+
+.formWrapper {
+  background-color: white;
+  margin: 1rem;
+  margin-top: 3rem;
+  height: 85vh;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  padding: 0.5rem;
+}
+
+.introP {
+  padding: 0.3rem 0;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+}
+
+.fset {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  border: none;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.input {
+  width: max(70%, 230px);
+  margin-left: auto;
+  height: 1.6rem;
+  padding: 0.7rem;
+  border: 2px solid hsla(0, 0%, 0%, 0.201);
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.inputL {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+hr {
+  margin-top: 2rem;
+  height: 4px;
+  background-color: black;
+  box-shadow: 1px 1px 2px black;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.button {
+  width: 60%;
+  padding: 0.4rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0 auto;
+  border: none;
+  background-color: lightskyblue;
+  border-radius: 5px;
+}
+
+.below {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.belowA {
+  color: rgb(135, 206, 250);
+}
+
+.belowA:any-link {
+  color: rgb(135, 206, 250);
+}
+
+.input:focus {
+  transform: scale(1.05);
+  box-shadow: 2px 2px 2px black;
+  outline: 2px solid lightskyblue;
+}
+/* utility */
+
+.tip {
+  padding: 0 1rem;
+  font-size: 0.9rem;
+  color: orangered;
+}
+
+.valid {
+  outline: 2px solid lightgreen;
+  width: max(70%, 230px);
+  margin-left: auto;
+  height: 1.6rem;
+  padding: 0.7rem;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.invalid {
+  outline: 2px solid orangered;
+  width: max(70%, 230px);
+  margin-left: auto;
+  height: 1.6rem;
+  padding: 0.7rem;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 748px) {
+  main {
+    display: flex;
+  }
+  .sideImg {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    justify-content: center;
+    width: min(40%, 600px);
+    left: 0;
+    z-index: 0;
+  }
+  .imgDiv {
+    height: 15vh;
+    position: absolute;
+    top: 30vh;
+    width: 100%;
+  }
+  .imgh1 {
+    font-size: 3rem;
+    padding: 1rem;
+  }
+  .imgLogo {
+    scale: 1.3;
+    margin: 1rem;
+  }
+  .imgFooter {
+    position: absolute;
+    bottom: 10vh;
+  }
+  .formWrapper {
+    width: min(60%, 700px);
+    position: relative;
+    padding: 2rem;
+  }
+
+  .formH2 {
+    margin-top: 1rem;
+  }
+
+  .wrapper {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 0.5rem;
+  }
+  .fset {
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .input {
+    width: min(250px, 100%);
+  }
+  .button {
+    width: 200px;
+    margin: 2rem;
+  }
+  .below {
+    margin: 0 2rem;
+    text-align: left;
+  }
+  .valid {
+    outline: 2px solid lightgreen;
+    width: min(250px, 100%);
+  }
+
+  .invalid {
+    outline: 2px solid orangered;
+    width: min(250px, 100%);
+  }
+}
